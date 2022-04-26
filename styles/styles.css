@@ -1,6 +1,6 @@
 @font-face {
     font-family: "raleway";
-    font-style: bold;
+    font-style: normal;
     font-weight: 800;
     src: url("../fonts/raleway/raleway-800.woff2");
     font-display: swap;
@@ -10,15 +10,15 @@
     font-family: "rubik";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/rubik/rubik-400.woff2");
+    src: url("../fonts/rubik/rubik-400.woff2"); 
     font-display: swap;
 }
 
 @font-face {
     font-family: "rubik";
-    font-style: bold;
+    font-style: normal;
     font-weight: 700;
-    src: url("../fonts/rubik/rubik-700.woff2");
+    src: url("../fonts/rubik/rubik-700.woff2"); 
     font-display: swap;
 }
 
@@ -31,11 +31,17 @@ html {
 }
 
 body {
-    font-family: "raleway";
+    font-family: "raleway", Arial, sans-serif;
     font-size: 18px;
     line-height: 30px;
     background-color: #FFFFFF;
     color: #444444;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    padding: 40px 0 0;
 }
 
 .header-container {
@@ -53,6 +59,36 @@ body {
     top: -20px;
 }
 
+.navigation-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    width: 517px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.search-field {
+    border: 2px solid black;
+    border-radius: 50px 0 0 50px;
+    padding: 10px 0 10px 48px;
+    width: 359px;
+    background-color: transparent;
+}
+
+.search-button {
+    border: 2px solid black;
+    border-radius: 0 50px 50px 0;
+    border-left: none;
+    padding: 10px 56px;
+    width: 160px;
+    background-color: transparent;
+}
+
 .navigation-list {
     display: flex;
     list-style: none;
@@ -65,16 +101,36 @@ body {
     color: #000000;
 }
 
+.basket-count {
+    width: 21px;
+    height: 21px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
 .navigation-basket-link:hover + .basket-list-wrapper {
-    display: block;
+    display: flex;
 }
 
 .basket-list-wrapper {
     display: none;
 }
 
-.header-catalog-link {
+.navigation-user-wrapper {
+    display: flex;
+    align-items: center;
     position: relative;
+}
+
+.header-catalog {
+    position: relative;
+}
+
+.header-catalog-link {
     font-size: 18px;
     line-height: 21px;
     font-weight: 800;
@@ -129,15 +185,19 @@ body {
     display: none;
 }
 
-.header-catalog-link:hover + .header-catalog-list-container {
-    display: block;
+.header-catalog-link:hover + .header-catalog-list {
+    display: flex;
 }
 
 .header-catalog-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
 }
 
 .header-sub-list {
@@ -154,6 +214,9 @@ body {
 .navigation-user {
     display: flex;
     list-style: none;
+    padding: 0;
+    margin-left: 333px;
+
 }
 
 .navigation-user-link {
@@ -164,6 +227,7 @@ body {
     text-transform: uppercase;
     line-height: 21px;
     color: #444444;
+    letter-spacing: 0.2em;
 }
 
 .page-container {
@@ -171,25 +235,189 @@ body {
     margin: 0 auto;
 }
 
-h1 {
+.visually-hidden {
     display: none;
 }
 
-.catalog-list {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
+.slider-list {
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.catalog-item {
+.slider-list-item {
+    display: flex;
+}
+
+.slider-number {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 180px;
+    line-height: 30px;
+}
+
+.slider-title {
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.description {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.slider-description {
+    margin-bottom: 61px;
+}
+
+.slider-characteristics {
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000000;
+    margin-top: 59px;
+}
+
+.slider-characteristics-title {
+    padding-right: 58px;
+}
+
+.slider-characteristics-description {
+    font-size: 16px;
+    color: #444444;
+    margin-top: 12px;
+    margin-bottom: 59px;
+    margin-right: 20px;
+}
+
+.button {
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.catalog-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 33px 40px;
+    list-style: none;
+    margin: 70px 0;
+    padding: 0;
+}
+
+.catalog-shape {
+    background-color: #FFE17F;
     width: 160px;
-    height: 253px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.monopodes {
+    align-items: flex-end;
+}
+
+.catalog-item-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-item-title {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.title {
+    font-family: 'Raleway';
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+    margin: 0;
+}
+
+.rare-goods {
+    display: flex;
+    margin: 225px 0 157px 0;
+}
+
+.rare-goods-shape {
+    display: flex;
+    background-color: #FFE17F;
+    width: 125px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-section {
+    display: flex;
+}
+
+.about-us {
+    margin-right: 131px;
+}
+
+.contacts-title {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.contacts-title::before {
+    content: "";
+    height: 7px;
+    width: 84px;
+    background-color: #000000;
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+
+.contacts-description {
+    margin-bottom: 30px;
+}
+
+.deliveries-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+.contacts-adress-title {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+}
+
+.contacts-number {
+    margin-bottom: 30px;
+}
+
+.contacts-hours {
+    margin-bottom: 40px;
+}
+
+.subscription {
+    margin-top: 80px;
 }
 
 .footer-container {
-    width: 1440px;
+    width: 1160px;
     margin: 0 auto;
     background-color: #444444;
+    color: white;
 }
