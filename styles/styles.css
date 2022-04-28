@@ -10,7 +10,7 @@
     font-family: "rubik";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/rubik/rubik-400.woff2"); 
+    src: url("../fonts/rubik/rubik-regular.woff2");
     font-display: swap;
 }
 
@@ -18,7 +18,7 @@
     font-family: "rubik";
     font-style: normal;
     font-weight: 700;
-    src: url("../fonts/rubik/rubik-700.woff2"); 
+    src: url("../fonts/rubik/rubik-bold.woff2"); 
     font-display: swap;
 }
 
@@ -263,7 +263,7 @@ body {
 }
 
 .description {
-    font-family: Arial, sans-serif;
+    font-family: "Arial", sans-serif;
     margin: 0;
     font-size: 18px;
     line-height: 30px;
@@ -352,6 +352,7 @@ body {
 .rare-goods {
     display: flex;
     margin: 225px 0 157px 0;
+    justify-content: space-between;
 }
 
 .rare-goods-shape {
@@ -415,9 +416,49 @@ body {
     margin-top: 80px;
 }
 
+.subscription-description-wrapper {
+    display: flex;
+    margin: 0 0 162px 0;
+    align-items: center;
+}
+
+.subscription-form-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .footer-container {
     width: 1160px;
     margin: 0 auto;
     background-color: #444444;
     color: white;
+}
+
+.footer-logo-img {
+    margin-top: 72px;
+}
+
+.footer-nav-wrapper {
+    display: flex;
+    margin: 35px 0 65px 0;
+    justify-content: space-between;
+}
+
+.footer-social-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-social-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
