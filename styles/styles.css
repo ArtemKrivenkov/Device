@@ -38,6 +38,8 @@ body {
     color: #444444;
     margin: 0;
     padding: 0;
+    width: 1440px;
+    margin: 0 auto;
 }
 
 .page-header {
@@ -92,11 +94,25 @@ body {
 .navigation-list {
     display: flex;
     list-style: none;
+    justify-content: space-between;
+}
+
+.enter-item {
+    padding-right: 176px;
+}
+
+.compare-item {
+    padding-right: 18px;
 }
 
 .navigation-link {
     font-weight: 400;
     text-align: center;
+    text-decoration: none;
+    color: #000000;
+}
+
+.navigation-basket-link {
     text-decoration: none;
     color: #000000;
 }
@@ -109,6 +125,7 @@ body {
     border-radius: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: absolute;
 }
 
@@ -216,7 +233,8 @@ body {
     list-style: none;
     padding: 0;
     margin-left: 333px;
-
+    width: 472px;
+    justify-content: space-between;
 }
 
 .navigation-user-link {
@@ -226,13 +244,14 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 21px;
-    color: #444444;
+    color: black;
     letter-spacing: 0.2em;
 }
 
 .page-container {
     width: 1160px;
     margin: 0 auto;
+    margin-bottom: 80px;
 }
 
 .visually-hidden {
@@ -250,7 +269,7 @@ body {
 }
 
 .slider-number {
-    font-family: Arial, sans-serif;
+    font-family: "rubik", Arial, sans-serif;
     font-weight: 700;
     font-size: 180px;
     line-height: 30px;
@@ -263,7 +282,7 @@ body {
 }
 
 .description {
-    font-family: "Arial", sans-serif;
+    font-family: "rubik", Arial, sans-serif;
     margin: 0;
     font-size: 18px;
     line-height: 30px;
@@ -276,7 +295,7 @@ body {
 
 .slider-characteristics {
     display: flex;
-    font-family: Arial, sans-serif;
+    font-family: "rubik",  Arial, sans-serif;
     font-size: 36px;
     font-weight: 400;
     line-height: 30px;
@@ -349,10 +368,15 @@ body {
     margin: 0;
 }
 
+.options {
+    display: flex;
+}
+
 .rare-goods {
     display: flex;
     margin: 225px 0 157px 0;
     justify-content: space-between;
+    background-color: #F0F0F0;
 }
 
 .rare-goods-shape {
@@ -362,6 +386,10 @@ body {
     height: 100px;
     align-items: center;
     justify-content: center;
+}
+
+.information-logo {
+    padding-right: 43px;
 }
 
 .contacts-section {
@@ -399,7 +427,7 @@ body {
 }
 
 .contacts-adress-title {
-    font-family: Arial, sans-serif;
+    font-family: "rubik",  Arial, sans-serif;
     font-size: 24px;
     margin: 0 0 15px 0;
 }
@@ -413,24 +441,68 @@ body {
 }
 
 .subscription {
-    margin-top: 80px;
+    background-color: #F0F0F0;
+    width: 1440px;
+    margin: 0;
+}
+
+.subscription-wrapper {
+    width: 1160px;
+    margin: 0 auto;
 }
 
 .subscription-description-wrapper {
     display: flex;
     margin: 0 0 162px 0;
     align-items: center;
+    padding-top: 64px;
+}
+
+.subscription-title {
+    max-width: 348px;
+    margin-right: 252px;
 }
 
 .subscription-form-wrapper {
     display: flex;
     align-items: center;
+    padding-bottom: 56px;
+}
+
+.email-form {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 810px;
+}
+
+.email {
+    width: 557px;
+    height: 55px;
+    border: transparent;
+    border-bottom: 3px solid #C4C4C4;
+    background-color: transparent;
+    opacity: 0.5;
+    padding: 14px 10px 11px 16px;
+}
+
+.email-button {
+    width: 253px;
+    background-color: transparent;
+    border: 3px solid #CECECE;
+}
+
+.tick-icon {
+    margin-left: 188px;
+    margin-right: 16px;
+}
+
+.page-footer {
+    background-color: #444444;
 }
 
 .footer-container {
     width: 1160px;
     margin: 0 auto;
-    background-color: #444444;
     color: white;
 }
 
@@ -442,6 +514,11 @@ body {
     display: flex;
     margin: 35px 0 65px 0;
     justify-content: space-between;
+}
+
+.contacts-phone {
+    color: white;
+    text-decoration: none;
 }
 
 .footer-social-wrapper {
